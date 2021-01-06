@@ -1,0 +1,308 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+:root {
+    --bg-light: #e5e5e5;
+    --bg-dark: #000;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.content-wrapper,
+.opening-section,
+.contactpage {
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.oval-btn {
+    font-family: 'Source Serif Pro', serif !important;
+}
+
+.bg-dark {
+    background-color: var(--bg-dark) !important;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.grid-xl-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-xl-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-g-1 {
+    grid-gap: .5rem;
+}
+
+.grid-g-2 {
+    grid-gap: 1rem;
+}
+
+.app-media-1 {
+    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 2.5rem;
+    align-items: center;
+}
+
+.app-media-2 {
+    grid-template-columns: 1.5fr 2fr;
+    grid-gap: 2.5rem;
+    align-items: center;
+    margin-top: -5rem;
+}
+
+.bg-light {
+    background-color: var(--bg-light) !important;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.lead-2x {
+    font-size: 2rem;
+}
+
+.bordered-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.bordered-icon>i {
+    margin: auto;
+}
+
+.icon-md {
+    font-size: 1.8rem !important
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+.text-underline {
+    text-decoration: underline;
+}
+
+.font-weight-bold {
+    font-weight: bold !important;
+}
+
+.first-section>.container {
+    position: relative;
+}
+
+.oval {
+    position: absolute;
+    left: 49%;
+    top: 0rem;
+    width: 573.333333333px;
+    height: 500px;
+    z-index: 0;
+    transform: rotate(5deg);
+}
+
+.oval-btn {
+    border-top-left-radius: 20rem;
+    border-bottom-right-radius: 20rem;
+}
+
+.oval-btn,
+.oval-btn * {
+    text-decoration: none !important;
+}
+
+.first-section,
+.first-section>.container>.content,
+.first-section>.container>.content * {
+    z-index: 10;
+}
+
+.first-section>.container>.content>.hero.lead-2x {
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+}
+
+.second-section,
+.second-section * {
+    z-index: 11
+}
+
+.opening-section .row * {
+    z-index: 10
+}
+
+.door-opening {
+    position: absolute;
+    height: 295.5px;
+    width: 220px;
+}
+
+#right-opening,
+#right-leaf {
+    left: 80%;
+}
+
+#right-opening {
+    top: -3rem
+}
+
+#left-opening {
+    left: 4%;
+    top: 55%;
+    transform: rotate(180deg);
+}
+
+.leaf {
+    position: absolute;
+    width: 215px;
+    height: 187.5px;
+    z-index: 0 !important
+}
+
+#left-leaf {
+    transform: rotate(90deg);
+    left: 25%;
+    top: 10%
+}
+
+#right-leaf {
+    transform: rotate(20deg);
+    top: 60%
+}
+
+.app-menu {
+    z-index: 2000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+.row>.col-12 .video-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.row>.col-12 .video-card,
+.row>.col-12 .video-card video {
+    width: 100%;
+}
+
+.row>.col-12 .video-card video {
+    height: 240px;
+    border-radius: 0;
+}
+
+#overlapping-section {
+    position: relative;
+}
+
+.overlapping-box {
+    height: 300px;
+    width: 350px;
+    position: absolute;
+}
+
+.overlapping-box.bg-dark {
+    margin-top: -30rem;
+    left: 68%;
+    z-index: 10;
+}
+
+.overlapping-box.bg-secondary {
+    top: -20rem;
+    left: 50%;
+    z-index: 0;
+}
+
+@media (min-width: 576px) {
+    .app-menu {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .app-menu {
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .app-menu {
+        max-width: 1140px;
+    }
+    .content-box-section {
+        position: relative;
+    }
+    .content-box {
+        width: 600px;
+        height: auto;
+    }
+    .content-box-1 {
+        position: absolute;
+        left: 0%;
+        z-index: 3
+    }
+    .content-box-2 {
+        position: absolute;
+        margin-top: 10%;
+        left: 50%;
+        z-index: 2;
+    }
+    #pillar-section {
+        position: relative;
+        margin-top: 29rem
+    }
+}
