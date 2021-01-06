@@ -29,6 +29,54 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.story-card,
+.info-column {
+    height: 100%;
+}
+
+.info-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-column>h6 {
+    flex: 1 0 auto;
+}
+
+.info-column>.stories-content {
+    flex-shrink: 0;
+}
+
+
+/* Style the header: fixed position (always stay at the top) */
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+
+/* The progress container (grey background) */
+
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+}
+
+
+/* The progress bar (scroll indicator) */
+
+.progress-bar {
+    height: 5px;
+    background: var(--warning);
+    width: 0%;
+}
+
+body,
 .content-wrapper,
 .opening-section,
 .contactpage {
@@ -219,7 +267,7 @@ a:hover,
     height: auto;
     overflow: hidden;
     transform: translateY(-3000px);
-    transition: transform .5s ease-in-out;
+    transition: transform .7s ease-in-out;
 }
 
 .app-menu.show {
@@ -261,26 +309,6 @@ a:hover,
     top: -20rem;
     left: 50%;
     z-index: 0;
-}
-
-@media (min-width: 576px) {
-    .app-menu {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container,
-    .container-md,
-    .container-sm {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .app-menu {
-        max-width: 960px;
-    }
 }
 
 @media(min-width: 1200px) {
