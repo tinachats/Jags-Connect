@@ -281,6 +281,16 @@
                                 <div class="item">
                                     <img class="owl-lazy" data-src="{{ asset('img/assets/cdc-GDokEYnOfnE-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/cdc-GDokEYnOfnE-unsplash.jpg') }}" src="{{ asset('img/assets/cdc-GDokEYnOfnE-unsplash.jpg') }}">
                                 </div>
+                                <div class="item">
+                                    <div class="view-more-card">
+                                        <div class="m-auto">
+                                            <div class="d-block text-center text-dark">
+                                                <i class="bi bi-arrow-right-circle icon-md"></i>
+                                                <p class="text-sm">View more</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- /.Events Carousel -->
                             </div>

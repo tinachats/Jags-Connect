@@ -279,6 +279,10 @@ a:hover,
     text-align: center;
 }
 
+.icon-md {
+    font-size: 24px;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 
