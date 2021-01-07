@@ -131,13 +131,13 @@
 
                             <div class="row justify-content-center py-sm-3 py-md-3 py-xl-5">
                                 <div class="col-12 col-xl-6 py-sm-3 py-md-3 py-xl-5 text-sm-center">
-                                    <h1 data-aos="fade-down" data-aos-duration="1000">
+                                    <h1>
                                         We lead a powerful community towards safer and more promising lives.
                                     </h1>
-                                    <p class="text-sm" data-aos="fade-up" data-aos-duration="1000">
+                                    <p class="text-sm">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore praesentium veritatis itaque officia, blanditiis repellat aspernatur deleniti minus corrupti!
                                     </p>
-                                    <div class="d-flex justify-content-center py-4" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="d-flex justify-content-center py-4">
                                         <a href="#services" role="button" class="btn btn-dark btn-lg px-5 oval-btn">About us</a>
                                     </div>
                                 </div>
