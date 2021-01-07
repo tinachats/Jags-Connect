@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Jags-Connect'),
+    'name' => env('APP_NAME', 'JAGS-FOUNDATION'),
 
     /*
     |--------------------------------------------------------------------------
