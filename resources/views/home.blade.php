@@ -11,8 +11,8 @@
         {{-- Favicon --}}
         <link rel="shortcut icon" href="{{ asset('img/app/logo.png') }}" type="image/x-icon">
         {{-- Bootstrap Core CSS --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-        {{-- <link rel="stylesheet" href="{{ asset('dist/bootstrap-md-5 p-sm-3.0.0-beta1-dist/css/bootstrap.min.css') }}"> --}}
+        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> --}}
+        <link rel="stylesheet" href="{{ asset('dist/bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css') }}">
         {{-- App Core CSS --}}
         <link rel="stylesheet" href="{{ asset('css/jagsconnect.min.css') }}">
         <!-- Owl-Carousel -->
@@ -40,7 +40,7 @@
                 </nav>
                 <div class="row align-items-end">
                     <div class="col-12 col-md-6 order-md-2">
-                        <a href="#our-work" class="text-dark">
+                        <a href="#what-we-do" class="text-dark">
                             <h1>What we do</h1>
                         </a>
                         <a href="#about-us" class="text-dark">
@@ -106,8 +106,8 @@
 
         <div class="content-wrapper">
             {{-- Home Page --}}
-            <div href="#homepage" class="border-bottom">
-                {{-- First Page Section --}}
+            <div id="homepage" class="border-bottom">
+                {{-- Landing Page Section --}}
                 <section class="bg-white first-section mb-sm-0">
                     <div class="container pb-5 mb-sm-0">
                         <div class="content">
@@ -129,6 +129,7 @@
                             </nav>
                             {{-- /.Nav --}}
 
+                            {{-- Landing Hero Content --}}
                             <div class="row justify-content-center py-sm-3 py-md-3 py-xl-5">
                                 <div class="col-12 col-xl-6 py-sm-3 py-md-3 py-xl-5 text-sm-center">
                                     <h1>
@@ -138,14 +139,15 @@
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis inventore praesentium veritatis itaque officia, blanditiis repellat aspernatur deleniti minus corrupti!
                                     </p>
                                     <div class="d-flex justify-content-center py-4">
-                                        <a href="#services" role="button" class="btn btn-dark btn-lg px-5 oval-btn">About us</a>
+                                        <a href="#about-us" role="button" class="btn btn-dark btn-lg px-5 oval-btn">About us</a>
                                     </div>
                                 </div>
                             </div>
+                            {{-- /.Landing Hero Content --}}
                         </div>
                     </div>
                 </section>
-                {{-- /.First Page Section --}}
+                {{-- /.Landing Page Section --}}
 
                 {{-- Partners Section --}}
                 <section class="bg-light py-sm-3 py-md-3 py-xl-5">
@@ -159,9 +161,15 @@
                             </div>
                             <div class="col-12 col-xl-9">
                                 <div class="d-grid grid-xl-3 grid-g-1">
-                                    @for ($i = 0; $i < 9; $i++)
-                                        <img src="{{ asset('img/app/logo.png') }}" alt="" class="grid-img" height="150" width="200">
-                                    @endfor
+                                    <img src="{{ asset('img/assets/christopher-campbell-rDEOVtE7vOs-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/jesse-ramirez-cRDTKQhDFBo-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/isaiah-mcclean-DrVJk1EaPSc-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/etty-fidele-_JcUjp-4mSk-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/etty-fidele--0L6m9EvivU-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/ryan-antooa-uOMkmwaM7GY-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/etty-fidele-nF8eo2nX374-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/hannah-busing-WG6iLHfMY9Y-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
+                                    <img src="{{ asset('img/assets/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg') }}" alt="" class="grid-img" height="150" width="200">
                                 </div>
                             </div>
                         </div>
@@ -186,7 +194,7 @@
                 {{-- /.Partners Section --}}
 
                 {{-- Services Section --}}
-                <section class="bg-white py-sm-3 py-md-3 py-xl-5">
+                <section id="services" class="bg-white py-sm-3 py-md-3 py-xl-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-xl-3">
@@ -223,7 +231,7 @@
                 </section>
                 {{-- /.Services Section --}}
 
-                {{-- Stories --}}
+                {{-- Stories Banner --}}
                 <section class="bg-light opening-section py-sm-3 py-md-3 py-xl-5 w-100">
                     <img src="{{ asset('img/app/opening.png') }}" alt="" id="right-opening" class="door-opening">
                     <img src="{{ asset('img/app/opening.png') }}" alt="" id="left-opening" class="door-opening">
@@ -234,16 +242,16 @@
                             <div class="col-12 col-xl-5 text-center py-sm-3 py-md-3 py-xl-2">
                                 <h1 class="text-dark">Follow our stories and stand with us.</h1>
                                 <div class="d-flex justify-content-center py-4">
-                                    <a href="#" role="button" class="btn btn-outline-dark btn-lg px-5 oval-btn">Find out more</a>
+                                    <a href="#stories" role="button" class="btn btn-outline-dark btn-lg px-5 oval-btn">Find out more</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                {{-- /.Stories --}}
+                {{-- /.Stories Banner --}}
 
-                {{-- Upcoming Events --}}
-                <section class="bg-white upcoming-events py-sm-3 py-md-3 py-xl-5">
+                {{-- Our Events --}}
+                <section id="events" class="bg-white upcoming-events py-sm-3 py-md-3 py-xl-5">
                     <div class="container py-sm-3 py-md-3 py-xl-5">
                         <div class="row justify-content-sm-center">
                             <div class="col-12 col-xl-3 text-sm-center">
@@ -253,39 +261,39 @@
                                 </p>
                             </div>
                             <div class="col-12 col-xl-9 text-sm-center justify-content-sm-center">
-                                {{-- Events Carousel --}}
-                                <div class="owl-carousel owl-theme w-100">
-                                    <div class="item">
-                                        <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" alt="">
-                                    </div>
-                                    <div class="item">
-                                        <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" alt="">
-                                    </div>
+                                <!-- Events Carousel -->
+                            <div class="owl-carousel owl-theme w-100">
+                                <div class="item">
+                                    <img class="owl-lazy" data-src="{{ asset('img/assets/santi-vedri-O5EMzfdxedg-unsplash.jpg') }}" src="{{ asset('img/assets/santi-vedri-O5EMzfdxedg-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/santi-vedri-O5EMzfdxedg-unsplash.jpg') }}" src="{{ asset('img/assets/santi-vedri-O5EMzfdxedg-unsplash.jpg') }}">
                                 </div>
-                                {{-- /.Events Carousel --}}
+                                <div class="item">
+                                    <img class="owl-lazy" data-src="{{ asset('img/assets/gemma-chua-tran-jNVgCpQ0LhQ-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/gemma-chua-tran-jNVgCpQ0LhQ-unsplash.jpg') }}" src="{{ asset('img/assets/gemma-chua-tran-jNVgCpQ0LhQ-unsplash.jpg') }}" height="200" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="owl-lazy" data-src="{{ asset('img/assets/christina-wocintechchat-com-VpcgTEKerEQ-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/christina-wocintechchat-com-VpcgTEKerEQ-unsplash.jpg') }}" src="{{ asset('img/assets/christina-wocintechchat-com-VpcgTEKerEQ-unsplash.jpg') }}" height="200" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="owl-lazy" data-src="{{ asset('img/assets/christina-wocintechchat-com-jzonFmreWok-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/christina-wocintechchat-com-jzonFmreWok-unsplash.jpg') }}" src="{{ asset('img/assets/christina-wocintechchat-com-jzonFmreWok-unsplash.jpg') }}" height="200" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="owl-lazy" data-src="{{ asset('img/assets/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg') }}" src="{{ asset('img/assets/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg') }}" height="200" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="owl-lazy" data-src="{{ asset('img/assets/cdc-GDokEYnOfnE-unsplash.jpg') }}" data-src-retina="{{ asset('img/assets/cdc-GDokEYnOfnE-unsplash.jpg') }}" src="{{ asset('img/assets/cdc-GDokEYnOfnE-unsplash.jpg') }}">
+                                </div>
+                            </div>
+                            <!-- /.Events Carousel -->
                             </div>
                         </div>
                     </div>
                 </section>
-                {{-- /.Upcoming Events --}}
+                {{-- /.Our Events --}}
             </div>
             {{-- / Home Page --}}
 
             {{-- What We Do Page --}}
-            <div href="#what-we-do" class="border-bottom">
-                {{-- First Page Section --}}
+            <div id="what-we-do" class="border-bottom">
+                {{-- What-We-Do Landing Page --}}
                 <section class="bg-light first-section">
                     <div class="container pb-5">
                         <div class="content">
@@ -307,6 +315,7 @@
                             </nav>
                             {{-- /.Nav --}}
 
+                            {{-- Hero Content --}}
                             <div class="row justify-content-center py-sm-3 py-md-3 py-xl-5">
                                 <div class="col-12 col-xl-6 text-sm-center py-sm-3 py-md-3 py-xl-5">
                                     <h1>
@@ -320,7 +329,9 @@
                                     </div>
                                 </div>
                             </div>
+                            {{-- /.Hero Content --}}
 
+                            {{-- Support Material --}}
                             <div class="row justify-content-xl-between">
                                 <div class="col-12 col-xl-4">
                                     <h1>Online Support Material</h1>
@@ -329,27 +340,27 @@
                                     <div class="row">
                                         <div class="col-12 col-md-6">
                                             <div class="story-card mb-sm-5">
-                                                <img src="{{ asset('img/app/placeholder-img-1.PNG') }}" height="200" class="w-100" alt="">
+                                                <img src="{{ asset('img/assets/cdc-aeh1dbI_a7I-unsplash.jpg') }}" height="200" class="w-100" alt="">
                                                 <div class="d-block">
                                                     <p class="text-sm">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsa quos assumenda!
                                                     </p>
                                                     <small class="text-sm font-weight-bold">
-                                                        By Author
-                                                    </small>
+                                                            By Author
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <div class="story-card mb-sm-5">
-                                                <img src="{{ asset('img/app/placeholder-img-1.PNG') }}" height="200" class="w-100" alt="">
+                                                <img src="{{ asset('img/assets/atoms-7e11Tfl2yxI-unsplash.jpg') }}" height="200" class="w-100" alt="">
                                                 <div class="d-block">
                                                     <p class="text-sm">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsa quos assumenda!
                                                     </p>
                                                     <small class="text-sm font-weight-bold">
-                                                        By Author
-                                                    </small>
+                                                            By Author
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
@@ -357,10 +368,11 @@
                                     <div class="row my-md-5 my-sm-5">
                                         <div class="col-12">
                                             <div class="story-card mb-sm-5">
-                                                <img src="{{ asset('img/app/placeholder-img-1.PNG') }}" height="300" class="w-100" alt="">
+                                                <img src="{{ asset('img/assets/disruptivo-vIAGW486ewo-unsplash.jpg') }}" height="300" class="w-100" alt="">
                                                 <div class="d-block">
                                                     <p class="text-sm">
-                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi facilis eos, magnam hic fugit deserunt aliquam saepe distinctio aut rerum culpa consequatur, omnis id, error officiis impedit eum alias ab debitis assumenda fuga dolorum quod? Voluptatum facilis sint quae voluptates?
+                                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi facilis eos, magnam hic fugit deserunt aliquam saepe distinctio aut rerum culpa consequatur, omnis id, error officiis impedit eum alias ab debitis assumenda fuga dolorum quod? Voluptatum
+                                                        facilis sint quae voluptates?
                                                     </p>
                                                 </div>
                                             </div>
@@ -371,13 +383,14 @@
                                     </div>
                                 </div>
                             </div>
+                            {{-- /.Support Material --}}
                         </div>
                     </div>
                 </section>
-                {{-- /.First Page Section --}}
+                {{-- /.What-We-Do Landing Page --}}
 
-                {{-- Second Section --}}
-                <section class="bg-white w-100">
+                {{-- Forum Section --}}
+                <section id="forum" class="bg-white w-100">
                     <div class="container">
                         <div class="row justify-content-center py-2">
                             <div class="col-12 col-xl-7 text-sm-center py-sm-3 py-md-3 py-xl-5">
@@ -476,7 +489,7 @@
             {{-- /.What We Do Page --}}
 
             {{-- About Us Page --}}
-            <div href="#about-us" class="border-bottom">
+            <div id="about-us" class="border-bottom">
                 {{-- First Page Section --}}
                 <section class="bg-light first-section">
                     <div class="container pb-5">
@@ -512,10 +525,11 @@
 
                             {{-- Founder Section --}}
                             <div class="d-grid align-items-center app-media-1">
-                                <img src="{{ asset('img/app/placeholder-img-1.png') }}" height="250" alt="" class="rounded-0 w-100">
+                                <img src="{{ asset('img/assets/eye-for-ebony-ZPhEExjvCuY-unsplash.jpg') }}" height="250" alt="" class="rounded-0 w-100">
                                 <div class="d-block">
                                     <h6 class="lead-2x">Meet our Founder</h6>
-                                    <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sunt sint, eum doloremque maxime itaque inventore earum voluptate, voluptatum a incidunt fuga obcaecati assumenda adipisci reiciendis placeat illo. Quae eum sapiente neque culpa ipsum sit quod perferendis aperiam, quibusdam eius!</p>
+                                    <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sunt sint, eum doloremque maxime itaque inventore earum voluptate, voluptatum a incidunt fuga obcaecati assumenda adipisci reiciendis placeat illo. Quae eum
+                                        sapiente neque culpa ipsum sit quod perferendis aperiam, quibusdam eius!</p>
                                 </div>
                             </div>
                             {{-- /.Founder Section --}}
@@ -524,55 +538,51 @@
                 </section>
                 {{-- /.First Page Section --}}
 
-                {{-- Second Page Section --}}
+                {{-- Team & Values --}}
                 <section class="bg-white second-section">
                     <div class="container">
                         <div class="d-grid app-media-2">
                             <div class="d-block">
                                 <h6 class="lead-2x">Meet the Jags Team</h6>
-                                <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sunt sint, eum doloremque maxime itaque inventore earum voluptate, voluptatum a incidunt fuga obcaecati assumenda adipisci reiciendis placeat illo. Quae eum sapiente neque culpa ipsum sit quod perferendis aperiam, quibusdam eius!</p>
+                                <p class="text-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sunt sint, eum doloremque maxime itaque inventore earum voluptate, voluptatum a incidunt fuga obcaecati assumenda adipisci reiciendis placeat illo. Quae eum sapiente
+                                    neque culpa ipsum sit quod perferendis aperiam, quibusdam eius!</p>
                             </div>
-                            <img src="{{ asset('img/app/placeholder-img-2.png') }}" height="250" alt="" class="rounded-0 w-100">
+                            <img src="{{ asset('img/assets/christina-wocintechchat-com-jzonFmreWok-unsplash.jpg') }}" height="250" alt="" class="rounded-0 w-100">
                         </div>
                         <div class="text-center">
                             <p class="mt-md-5 mt-sm-5">Our Values</p>
                             <h6 class="lead-2x">We create space.</h6>
                             <div class="row justify-content-center w-100">
                                 <p class="text-sm w-lg-50 w-sm-100">
-                                    We hold space for voice and perspectives to come together 
-                                    through love and support. We invite dialogue and collaboration
-                                    to build change within.
+                                    We hold space for voice and perspectives to come together through love and support. We invite dialogue and collaboration to build change within.
                                 </p>
                             </div>
                             <div class="row justify-content-center my-md-5 my-sm-5 w-100">
                                 <h6 class="lead-2x">We choose to contribute.</h6>
                                 <p class="text-sm w-lg-50 w-sm-100">
-                                    We take pride in the way we contribute to our community.
-                                    We require it of others and of ourselves. We're here to prevent violence.
+                                    We take pride in the way we contribute to our community. We require it of others and of ourselves. We're here to prevent violence.
                                 </p>
                             </div>
                             <div class="row justify-content-center w-100 mb-5">
                                 <h6 class="lead-2x">We empower change.</h6>
                                 <p class="text-sm w-lg-50 w-sm-100">
-                                    We believe that change is not an end goal, it is a constant 
-                                    action needed to build momentum. We create a circular motion of change 
-                                    to which
+                                    We believe that change is not an end goal, it is a constant action needed to build momentum. We create a circular motion of change to which
                                 </p>
                             </div>
                         </div>
                     </div>
                 </section>
-                {{-- /.Second Page Section --}}
+                {{-- /.Team & Values --}}
 
-                {{-- Third Section --}}
-                <section class="bg-light">
+                {{-- JAGS Stories --}}
+                <section id="stories" class="bg-light">
                     <div class="container">
                         <h6 class="lead-2x py-sm-3 py-md-3 py-xl-5 text-sm-center">Our Community Stories</h6>
                         <div class="row mb-5">
                             <div class="col-12 col-md-6">
                                 {{-- Story Card --}}
                                 <div class="row story-card mb-sm-5">
-                                    <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" class="col-12 col-xl-5 h-auto" alt="">
+                                    <img src="{{ asset('img/assets/christina-wocintechchat-com-e6XkZfEt_mc-unsplash.jpg') }}" class="col-12 col-xl-5" height="219" width="238" alt="">
                                     <div class="col-12 col-xl-7 info-column">
                                         <h6 class="font-600 text-capitalize ml-2">with zainab</h6>
                                         <div class="stories-content">
@@ -593,7 +603,7 @@
                             <div class="col-12 col-md-6">
                                 {{-- Story Card --}}
                                 <div class="row story-card mb-sm-5">
-                                    <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" class="col-12 col-xl-5 h-auto" alt="">
+                                    <img src="{{ asset('img/assets/suad-kamardeen-4QIpATu_JSQ-unsplash.jpg') }}" class="col-12 col-xl-5" height="219" width="238" alt="">
                                     <div class="col-12 col-xl-7 info-column">
                                         <h6 class="font-600 text-capitalize ml-2">with zainab</h6>
                                         <div class="stories-content">
@@ -621,7 +631,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6">
                                         <div class="story-card mb-sm-5">
-                                            <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="150" class="w-100" alt="">
+                                            <img src="{{ asset('img/assets/etty-fidele--0L6m9EvivU-unsplash.jpg') }}" height="150" class="w-100" alt="">
                                             <div class="d-block">
                                                 <h6 class="font-weight-bold text-dark text-capitalize mt-1">with our sister</h6>
                                                 <p class="text-sm">
@@ -637,7 +647,7 @@
                                     </div>
                                     <div class="col-12 col-md-6">
                                         <div class="story-card mb-sm-5">
-                                            <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="150" class="w-100" alt="">
+                                            <img src="{{ asset('img/assets/gemma-chua-tran-jNVgCpQ0LhQ-unsplash.jpg') }}" height="150" class="w-100" alt="">
                                             <div class="d-block">
                                                 <h6 class="font-weight-bold text-dark text-capitalize mt-1">with young women</h6>
                                                 <p class="text-sm">
@@ -658,7 +668,7 @@
                             <div class="col-12 col-md-6 col-xl-9">
                                 {{-- Story Card --}}
                                 <div class="row story-card mb-sm-5">
-                                    <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" class="col-12 col-xl-5 h-auto" alt="">
+                                    <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" class="col-12 col-xl-5" height="219" width="238" alt="">
                                     <div class="col-12 col-xl-7 info-column">
                                         <h6 class="font-600 text-capitalize ml-2">with zainab</h6>
                                         <div class="stories-content">
@@ -677,7 +687,7 @@
                             </div>
                             <div class="col-12 col-md-6 col-xl-3">
                                 <div class="story-card mb-sm-5">
-                                    <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" class="w-100" alt="">
+                                    <img src="{{ asset('img/assets/isaiah-mcclean-DrVJk1EaPSc-unsplash.jpg') }}" class="w-100" alt="">
                                     <div class="d-block">
                                         <h6 class="font-weight-bold text-dark text-capitalize mt-1">with emily</h6>
                                         <p class="text-sm">
@@ -694,12 +704,12 @@
                         </div>
                     </div>
                 </section>
-                {{-- /.Third Section --}}
+                {{-- /.JAGS Stories --}}
             </div>
             {{-- /.About Us Page --}}
 
             {{-- News Page --}}
-            <div href="#news" class="border-bottom">
+            <div id="news" class="border-bottom">
                 {{-- First Page Section --}}
                 <section class="bg-white">
                     <div class="container pb-5">
@@ -744,144 +754,144 @@
                             <div class="row">
                                 <div class="col-12 col-xl-6 col-xxl-8">
                                     <div class="row">
-                                        {{-- Story Card --}}
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-6">
                                             <div class="mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
+                                                <img src="{{ asset('img/assets/christina-wocintechchat-com-VpcgTEKerEQ-unsplash.jpg') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
                                                 <div class="col-12 col-xl-12">
                                                     <p class="text-dark text-dark">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                     </p>
                                                     <small class="text-dark">
-                                                        <strong>News - Dec 21, 2000</strong>
-                                                    </small>
+                                                            <strong>News - Dec 21, 2000</strong>
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
-
-                                        {{-- Story Card --}}
+                                        <!-- /.Story Card -->
+    
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-6">
                                             <div class="mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
+                                                <img src="{{ asset('img/assets/chris-benson-BhnwgdLunXw-unsplash.jpg') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
                                                 <div class="col-12 col-xl-12">
                                                     <p class="text-dark text-dark">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                     </p>
                                                     <small class="text-dark">
-                                                        <strong>News - Dec 21, 2000</strong>
-                                                    </small>
+                                                            <strong>News - Dec 21, 2000</strong>
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
-
-                                        {{-- Story Card --}}
+                                        <!-- /.Story Card -->
+    
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-6">
                                             <div class="mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
+                                                <img src="{{ asset('img/assets/etty-fidele-pwHNzvxVvnM-unsplash.jpg') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
                                                 <div class="col-12 col-xl-12">
                                                     <p class="text-dark text-dark">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                     </p>
                                                     <small class="text-dark">
-                                                        <strong>News - Dec 21, 2000</strong>
-                                                    </small>
+                                                            <strong>News - Dec 21, 2000</strong>
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
-
-                                        {{-- Story Card --}}
+                                        <!-- /.Story Card -->
+    
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-6">
                                             <div class="mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
+                                                <img src="{{ asset('img/assets/santi-vedri-O5EMzfdxedg-unsplash.jpg') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
                                                 <div class="col-12 col-xl-12">
                                                     <p class="text-dark text-dark">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                     </p>
                                                     <small class="text-dark">
-                                                        <strong>News - Dec 21, 2000</strong>
-                                                    </small>
+                                                            <strong>News - Dec 21, 2000</strong>
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
-
-                                        {{-- Story Card --}}
+                                        <!-- /.Story Card -->
+    
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-6">
                                             <div class="mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
+                                                <img src="{{ asset('img/assets/yingchou-han-IJrIeCs3D4g-unsplash.jpg') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
                                                 <div class="col-12 col-xl-12">
                                                     <p class="text-dark text-dark">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                     </p>
                                                     <small class="text-dark">
-                                                        <strong>News - Dec 21, 2000</strong>
-                                                    </small>
+                                                            <strong>News - Dec 21, 2000</strong>
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
-
-                                        {{-- Story Card --}}
+                                        <!-- /.Story Card -->
+    
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-6">
                                             <div class="mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
+                                                <img src="{{ asset('img/assets/chayene-rafaela-nGwkIZFelko-unsplash.jpg') }}" height="200" width="250" alt="" class="col-12 col-xl-12 align-self-start">
                                                 <div class="col-12 col-xl-12">
                                                     <p class="text-dark text-dark">
                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                     </p>
                                                     <small class="text-dark">
-                                                        <strong>News - Dec 21, 2000</strong>
-                                                    </small>
+                                                            <strong>News - Dec 21, 2000</strong>
+                                                        </small>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
+                                        <!-- /.Story Card -->
                                     </div>
                                 </div>
                                 <div class="col-12 col-xl-6 col-xxl-4">
                                     <div class="row">
-                                        {{-- Story Card --}}
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-12">
                                             <div class="d-flex flex-column vertical-card mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" alt="" class="align-self-start w-100 h-100">
+                                                <img src="{{ asset('img/assets/cdc-aeh1dbI_a7I-unsplash.jpg') }}" alt="" class="align-self-start w-100 h-100">
                                                 <div class="d-flex flex-column">
                                                     <div class="stories-content mt-auto">
                                                         <p class="text-dark text-dark">
                                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                         </p>
                                                         <small class="text-dark">
-                                                            <strong class="text-sm">
-                                                                News - December 21, 2020
-                                                            </strong>
-                                                        </small>
+                                                                <strong class="text-sm">
+                                                                    News - December 21, 2020
+                                                                </strong>
+                                                            </small>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
-
-                                        {{-- Story Card --}}
+                                        <!-- /.Story Card -->
+    
+                                        <!-- Story Card -->
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-12">
                                             <div class="d-flex flex-column vertical-card mb-5">
-                                                <img src="{{ asset('img/app/placeholder-img-2.PNG') }}" alt="" class="align-self-start w-100 h-100">
+                                                <img src="{{ asset('img/assets/suad-kamardeen-4VN2WWVWqDs-unsplash.jpg') }}" alt="" class="align-self-start w-100 h-100">
                                                 <div class="d-flex flex-column">
                                                     <div class="stories-content mt-auto">
                                                         <p class="text-dark text-dark">
                                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium totam quod repellendus ea, mollitia unde.
                                                         </p>
                                                         <small class="text-dark">
-                                                            <strong class="text-sm">
-                                                                News - December 21, 2020
-                                                            </strong>
-                                                        </small>
+                                                                <strong class="text-sm">
+                                                                    News - December 21, 2020
+                                                                </strong>
+                                                            </small>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        {{-- /.Story Card --}}
+                                        <!-- /.Story Card -->
                                     </div>
                                 </div>
                             </div>
@@ -902,8 +912,8 @@
             {{-- /.News Page --}}
 
             {{-- Resources Page --}}
-            <div href="#resources" class="border-bottom">
-                {{-- First Page Section --}}
+            <div id="resources" class="border-bottom">
+                {{-- Resources Landing Page --}}
                 <section class="bg-white first-section">
                     <div class="container">
                         <div class="content">
@@ -925,6 +935,7 @@
                             </nav>
                             {{-- /.Nav --}}
 
+                            {{-- Resources's Hero Content --}}
                             <div class="row justify-content-center py-sm-3 py-md-3 py-xl-5">
                                 <div class="col-12 col-xl-8 text-sm-center py-sm-3 py-md-3 py-xl-5">
                                     <h1>
@@ -935,6 +946,7 @@
                                     </p>
                                 </div>
                             </div>
+                            {{-- /.Resources's Hero Content --}}
 
                             <div class="row justify-content-xl-between">
                                 <div class="col-12">
@@ -947,7 +959,8 @@
                                 @endfor
                             </div>
 
-                            <div class="row align-items-md-start py-sm-3 py-md-3 pt-xl-5">
+                            {{-- Video Content Section --}}
+                            <div id="video-content" class="row align-items-md-start py-sm-3 py-md-3 pt-xl-5">
                                 <div class="col-12 col-md-6">
                                     <h1>Videos</h1>
                                     <p>Topic of video here</p>
@@ -996,7 +1009,9 @@
                                 </div>
                                 {{-- /.Videos --}}
                             </div>
+                            {{-- /.Video Content Section --}}
 
+                            {{-- Video Content Section --}}
                             <div class="row align-items-md-start py-sm-3 py-md-3 py-xl-5">
                                 <div class="col-12 col-md-6">
                                     <p class="font-weight-bold">Topic of video here</p>
@@ -1038,13 +1053,13 @@
                         </div>
                     </div>
                 </section>
-                {{-- /.First Page Section --}}
+                {{-- /.Resources Landing Page --}}
             </div>
             {{-- /.Resources Page --}}
 
             {{-- Contact Us Page --}}
-            <div href="#contact-us" class="border-bottom">
-                {{-- First Page Section --}}
+            <div id="contact-us" class="border-bottom">
+                {{-- Contact Us Landing Page --}}
                 <section class="bg-white first-section">
                     <div class="container pb-5">
                         <div class="content">
@@ -1066,6 +1081,7 @@
                             </nav>
                             {{-- /.Nav --}}
 
+                            {{-- Contact Us Hero --}}
                             <div class="row justify-content-sm-center justify-content-md-start py-sm-3 py-md-3 py-xl-5">
                                 <div class="col-12 col-xl-6 text-sm-center py-sm-3 py-md-3 py-xl-5">
                                     <h1>
@@ -1100,20 +1116,21 @@
                                     </div>
                                 </div>
                             </div>
+                            {{-- /.Contact Us Hero --}}
                         </div>
                     </div>
                 </section>
-                {{-- /.First Page Section --}}
+                {{-- /.Contact Us Landing Page --}}
 
-                {{-- Overlapping Boxes --}}
+                <!-- Operators -->
                 <section class="container" id="overlapping-section">
-                    <div class="bg-dark overlapping-box"></div>
-                    <div class="bg-secondary overlapping-box"></div>
+                    <div class="operator-1 overlapping-box shadow-sm"></div>
+                    <div class="bg-secondary overlapping-box shadow-lg"></div>
                 </section>
-                {{-- /.Overlapping Boxes --}}
+                <!-- /.Operators -->
 
                 {{-- Jobs Section --}}
-                <section class="bg-white py-sm-3 py-md-3 py-xl-5">
+                <section id="jobs" class="bg-white py-sm-3 py-md-3 py-xl-5">
                     <div class="container">
                         <div class="row">
                             <div class="col-12 col-xl-3">
@@ -1147,8 +1164,8 @@
                 </section>
                 {{-- /.Jobs Section --}}
 
-                {{-- Fourth Section --}}
-                <section class="bg-dark fourth-section mt-0 pt-0">
+                {{-- Donate Section --}}
+                <section id="donate" class="bg-dark fourth-section mt-0 pt-0">
                     <div class="container">
                         <div class="row justify-content-center py-sm-3 py-md-3">
                             <div class="col-12 col-xl-5 text-md-justify text-sm-center py-sm-3 py-md-3">
@@ -1163,9 +1180,9 @@
                         </div>
                     </div>
                 </section>
-                {{-- /.Fourth Section --}}
+                {{-- /.Donate Section --}}
 
-                {{-- Fifth Section --}}
+                {{-- Footer Section --}}
                 <section class="bg-white fifth-section">
                     <div class="container">
                         <div class="row justify-content-sm-center justify-content-md-start align-items-center">
@@ -1182,7 +1199,7 @@
                                 <div class="row">
                                     <div class="col-12 col-md-6 col-xl-4">
                                         <div class="d-flex flex-column">
-                                            <a href="#our-work" class="text-dark text-capitalize text-sm">What we do</a>
+                                            <a href="#what-we-do" class="text-dark text-capitalize text-sm">What we do</a>
                                             <a href="#about-us" class="text-dark text-capitalize text-sm">about us</a>
                                             <a href="#news" class="text-dark text-capitalize text-sm">News/Events</a>
                                             <a href="#resources" class="text-dark text-capitalize text-sm">resources</a>
@@ -1236,17 +1253,17 @@
                         </div>
                     </div>
                 </section>
-                {{-- /.Fifth Section --}}
+                {{-- /.Footer Section --}}
             </div>
             {{-- /.Contact Us Page --}}
         </div>
 
         {{-- JQuery --}}
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        {{-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> --}}
         <script src="{{ asset('dist/jquery/jquery.min.js') }}"></script>
         {{-- Bootstrap Core JS --}}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-        <script src="{{ asset('dist/bootstrap-md-5 p-sm-3.0.0-beta1-dist/js/bootstrap.bundle.min.js') }}"></script>
+        {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> --}}
+        <script src="{{ asset('dist/bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.min.js') }}"></script>
         <!-- OwlCarousel -->
         <script src="{{ asset('dist/OwlCarousel2-2.3.4/dist/owl.carousel.min.js') }}"></script>
         {{-- AOS --}}

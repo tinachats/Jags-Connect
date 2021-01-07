@@ -232,8 +232,51 @@ a:hover,
     border-radius: 0;
 }
 
+.content-box,
+.overlapping-box,
 #overlapping-section {
     position: relative;
+}
+
+.content-box *,
+.overlapping-box *,
+.content-box-1,
+.content-box-2 {
+    z-index: 100 !important;
+    color: #fff !important;
+}
+
+.content-box::after,
+.overlapping-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
+}
+
+.content-box.content-box-1 {
+    background: url('../img/assets/christina-wocintechchat-com-eF7HN40WbAQ-unsplash.jpg') no-repeat center center/cover;
+}
+
+.content-box.content-box-2 {
+    background: url('../img/assets/hannah-busing-WG6iLHfMY9Y-unsplash.jpg') no-repeat center center/cover;
+}
+
+.item>img.owl-lazy,
+.view-more-card {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.view-more-card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -524,12 +567,14 @@ a:hover,
     .overlapping-box {
         position: absolute;
     }
-    .overlapping-box.bg-dark {
+    .overlapping-box.operator-1 {
+        background: url('../img/contact-us/operator.png') no-repeat center center/cover;
         margin-top: -30rem;
         left: 68%;
         z-index: 10;
     }
     .overlapping-box.bg-secondary {
+        background: url('../img/contact-us/operator.jpg') no-repeat center center/cover;
         top: -20rem;
         left: 50%;
         z-index: 0;
